@@ -23,7 +23,8 @@ from pyrogram.types import (
 load_dotenv()
 
 # MongoDB setup
-mongo_client = MongoClient(os.getenv("MONGO_URI"))
+mongo_uri = os.getenv("MONGO_URI", "mongodb://localhost:27017")
+mongo_client = MongoClient(mongo_uri)
 db = mongo_client["tmdb_poster_bot"]
 user_sessions = db["user_sessions"]
 bot_settings = db["bot_settings"]
