@@ -1,0 +1,8 @@
+tgcrypto
+pillow
+python-dotenv
+requests
+flask 
+pyrofork==2.3.68
+pymongo[srv]
+aiohttp
